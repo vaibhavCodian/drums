@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="keys">
+    <div data-key="90" class="key">
+      <kbd>z</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="88" class="key">
+      <kbd>x</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="67" class="key">
+      <kbd>c</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="86" class="key">
+      <kbd>v</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="66" class="key">
+      <kbd>b</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="78" class="key">
+      <kbd>n</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="77" class="key">
+      <kbd>m</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="65" class="key">
+      <kbd>a</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio data-key="90" src="utils/clap.wav"></audio>
+  <audio data-key="88" src="utils/hihat.wav"></audio>
+  <audio data-key="67" src="utils/kick.wav"></audio>
+  <audio data-key="86" src="utils/openhat.wav"></audio>
+  <audio data-key="66" src="utils/boom.wav"></audio>
+  <audio data-key="78" src="utils/ride.wav"></audio>
+  <audio data-key="77" src="utils/snare.wav"></audio>
+  <audio data-key="65" src="utils/tom.wav"></audio>
+  <audio data-key="76" src="utils/tink.wav"></audio>
+
+<script>
+    window.addEventListener('keydown', function (e){
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        if(!audio) return;// stop the the function from running when no audio available.
+        audio.currentTime = 0; // rewind to the start.
+        audio.play()
+    });
+
+</script>
+</body>
+</html>
