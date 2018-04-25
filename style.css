@@ -7,6 +7,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    scroll-snap-points-x: 0;
   }
   
   .keys {
@@ -15,13 +16,14 @@ html {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     
   }
   .keys{
-    margin-top: 100px;
+    margin-top: 150px;
   }
   .key {
-    border: .4rem solid rgb(22, 21, 40);
+    border: .4rem solid rgb(38, 34, 58);
     border-radius: .5rem;
     margin: 1rem;
     font-size: 1.5rem;
@@ -30,14 +32,14 @@ html {
     width: 10rem;
     text-align: center;
     color: white;
-    background: #2ec1e275;
+    background: #3198f885;
     text-shadow: 0 0 .5rem black;
   }
   
   .playing {
-    transform: scale(1.8);
-    border-color: #3d99c4;
-    box-shadow: 0 0 1rem #5dc9ac;
+    transform: scale(1.5);
+    border-color: #c43d6c;
+    box-shadow: 0 0 1rem #3f24b8;
   }
   
   kbd {
