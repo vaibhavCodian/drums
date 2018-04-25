@@ -15,26 +15,29 @@ html {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    
   }
-  
+  .keys{
+    margin-top: 100px;
+  }
   .key {
-    border: .4rem solid black;
+    border: .4rem solid rgb(22, 21, 40);
     border-radius: .5rem;
     margin: 1rem;
     font-size: 1.5rem;
     padding: 1rem .5rem;
-    transition: all .07s ease;
+    transition: all .10s ease;
     width: 10rem;
     text-align: center;
     color: white;
-    background: #3157b875;
+    background: #2ec1e275;
     text-shadow: 0 0 .5rem black;
   }
   
   .playing {
-    transform: scale(1.1);
+    transform: scale(1.8);
     border-color: #3d99c4;
-    box-shadow: 0 0 1rem #5dbec9;
+    box-shadow: 0 0 1rem #5dc9ac;
   }
   
   kbd {
@@ -46,5 +49,5 @@ html {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
-    color: #e2faff;
+    color: #feffe9;
   }
